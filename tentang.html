@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang | Dapoer Bu'e Bimkin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background-color: #eafaff;
+      color: #333;
+    }
+
+    header {
+      background-color: #87ceeb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .image-box {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      max-height: 300px;
+      border-radius: 20px;
+    }
+
+    .text-box {
+      flex: 1;
+      padding: 1rem 2rem;
+    }
+
+    .text-box h2 {
+      font-size: 2.5rem;
+      color: #004e89;
+      margin-bottom: 1rem;
+    }
+
+    .text-box p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      color: #0096c7;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #87ceeb;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .text-box {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dapoer Bu'e Bimkin</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="produk.html">Produk</a>
+      <a href="berita1.html">Berita & Promo</a>
+      <a href="lokasi.html">Lokasi & Kontak</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <div class="image-box">
+      <img src="logo.jpg" alt="Logo Dapoer Bu'e Bimkin">
+    </div>
+    <div class="text-box">
+      <h2>Tentang Kami</h2>
+      <p><span class="highlight">Dapoer Bu'e Bimkin</span> adalah usaha mikro yang fokus menyajikan aneka kue basah khas Indonesia dengan cita rasa autentik.</p>
+      <p>Berawal dari resep turun-temurun di dapur keluarga, Bu Bimkin mulai menjual kue ke tetangga dan pasar tradisional. Kini, usaha ini telah berkembang dan melayani berbagai pesanan skala rumahan maupun besar.</p>
+      <p>Dengan komitmen pada bahan alami dan tanpa pengawet, kami percaya bahwa <span class="highlight">rasa rumahan tak pernah tergantikan</span>.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Dapoer Bu'e Bimkin. Hak cipta dilindungi.
+  </footer>
+</body>
+</html>

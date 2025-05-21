@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lokasi - Dapoer Bu'e Bimkin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Baloo 2', cursive;
+      background-color: #eafaff;
+      color: #333;
+    }
+
+    header {
+      background-color: #87ceeb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .lokasi-section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .lokasi-section h2 {
+      text-align: center;
+      color: #004e89;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .lokasi-section p {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .alamat {
+      background-color: #d0f0ff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    form {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      border: 2px solid #87ceeb;
+      border-radius: 8px;
+      font-family: 'Baloo 2', cursive;
+      font-size: 1rem;
+    }
+
+    form button {
+      padding: 0.8rem 1.8rem;
+      background-color: #0096c7;
+      border: none;
+      border-radius: 40px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #0077aa;
+    }
+
+    #pesanBerhasil {
+      display: none;
+      margin-top: 1.5rem;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #87ceeb;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dapoer Bu'e Bimkin</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="produk.html">Produk</a>
+      <a href="promo.html">Berita & Promo</a>
+      <a href="lokasi.html">Lokasi & Kontak</a>
+    </nav>
+  </header>
+
+  <section class="lokasi-section">
+    <h2>Lokasi Kami</h2>
+    <p>Saat ini, kami beroperasi dari rumah dan melayani pemesanan via WhatsApp. Yuk bantu kami memilih lokasi cabang baru!</p>
+
+    <div class="alamat">
+      <strong>Alamat Sekarang:</strong><br>
+      Perumahan Mahkota Regency, Blok F<br>
+         <p>Untuk pemesanan, silakan hubungi kami langsung melalui WhatsApp:</p>
+      <p><a href="https://wa.me/6285880049214" target="_blank">‪+62 858-8004-9214‬</a></p>
+    </div>
+
+    <h3 style="text-align: center;">Punya Saran Lokasi Strategis?</h3>
+    <p style="text-align: center;">Kami sedang mencari lokasi baru di sekitar kampus. Kirim saranmu lewat form di bawah ini!</p>
+
+    <form id="lokasiForm">
+      <label for="nama">Nama Kamu</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="lokasi">Usulan Lokasi</label>
+      <input type="text" id="lokasi" name="lokasi" placeholder="Contoh: Jalan Prof. Soedarto, Tembalang" required>
+
+      <label for="alasan">Alasan Kenapa Lokasi Ini Cocok</label>
+      <textarea id="alasan" name="alasan" rows="4" placeholder="Tulis alasan kenapa tempat ini cocok untuk buka cabang..."></textarea>
+
+      <button type="submit">Kirim Saran</button>
+    </form>
+
+    <div id="pesanBerhasil">
+      ✅ Terima kasih! Saran lokasi kamu sudah kami terima!
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Dapoer Bu'e Bimkin. Hak cipta dilindungi.
+  </footer>
+
+  <script>
+    const form = document.getElementById('lokasiForm');
+    const pesanBerhasil = document.getElementById('pesanBerhasil');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      form.style.display = 'none';
+      pesanBerhasil.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
